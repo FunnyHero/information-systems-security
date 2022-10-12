@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
-<form th:method="POST" th:align="center" style="
+<form th:method="POST" th:object="${stages}" action="securityGrade" th:align="center" style="
     padding: 12px 20px;
     margin: 8px 0;
     max-width: 80%;
@@ -29,35 +29,94 @@
         </tr>
         </thead>
         <tbody>
-        <div th:remove="tag" th:each="stageDTO: ${stages}">
+        <div th:remove="tag" th:each="stageDTO, itemStat : ${stages.stageDTOS}">
             <tr>
-                <td th:text="${stageDTO.base.matrixElementNumber}"></td>
-                <td th:text="${stageDTO.base.importanceFactor}"></td>
-                <td th:text="${stageDTO.base.achievedSecurityProfile}"></td>
-                <td th:text="${stageDTO.base.importanceFactorMultiplyByAchievedSecurityProfile}"></td>
-                <td th:text="${stageDTO.base.profileComparison}"></td>
-                <td th:rowspan="4" th:text="${stageDTO.requirementGroupsFulfillment}"></td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].base.matrixElementNumber|" th:value="${stageDTO.getBase().getMatrixElementNumber()}"/>
+                    <span th:text="${stageDTO.base.matrixElementNumber}"/>
+                </td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].base.importanceFactor|" th:value="${stageDTO.getBase().getImportanceFactor()}"/>
+                    <span th:text="${stageDTO.base.importanceFactor}"/>
+                </td>
+                <td>
+                    <input th:name="|stageDTOS[${itemStat.index}].base.achievedSecurityProfile|" th:value="${stageDTO.getBase().getAchievedSecurityProfile()}"/>
+                </td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].base.importanceFactorMultiplyByAchievedSecurityProfile|" th:value="${stageDTO.getBase().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
+                    <span th:text="${stageDTO.base.importanceFactorMultiplyByAchievedSecurityProfile}"/>
+                </td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].base.profileComparison|" th:value="${stageDTO.getBase().getProfileComparison()}"/>
+                    <span th:text="${stageDTO.base.profileComparison}"/>
+                </td>
+                <td th:rowspan="4">
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].requirementGroupsFulfillment|" th:value="${stageDTO.getRequirementGroupsFulfillment()}"/>
+                    <span th:text="${stageDTO.requirementGroupsFulfillment}"/>
+                </td>
             </tr>
             <tr>
-                <td th:text="${stageDTO.structure.matrixElementNumber}"></td>
-                <td th:text="${stageDTO.structure.importanceFactor}"></td>
-                <td th:text="${stageDTO.structure.achievedSecurityProfile}"></td>
-                <td th:text="${stageDTO.structure.importanceFactorMultiplyByAchievedSecurityProfile}"></td>
-                <td th:text="${stageDTO.structure.profileComparison}"></td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].structure.matrixElementNumber|" th:value="${stageDTO.getStructure().getMatrixElementNumber()}"/>
+                    <span th:text="${stageDTO.structure.matrixElementNumber}"/>
+                </td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].structure.importanceFactor|" th:value="${stageDTO.getStructure().getImportanceFactor()}"/>
+                    <span th:text="${stageDTO.structure.importanceFactor}"/>
+                </td>
+                <td>
+                    <input th:name="|stageDTOS[${itemStat.index}].structure.achievedSecurityProfile|" th:value="${stageDTO.getStructure().getAchievedSecurityProfile()}"/>
+                </td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].structure.importanceFactorMultiplyByAchievedSecurityProfile|" th:value="${stageDTO.getStructure().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
+                    <span th:text="${stageDTO.structure.importanceFactorMultiplyByAchievedSecurityProfile}"/>
+                </td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].structure.profileComparison|" th:value="${stageDTO.getStructure().getProfileComparison()}"/>
+                    <span th:text="${stageDTO.structure.profileComparison}"/>
+                </td>
             </tr>
             <tr>
-                <td th:text="${stageDTO.measures.matrixElementNumber}"></td>
-                <td th:text="${stageDTO.measures.importanceFactor}"></td>
-                <td th:text="${stageDTO.measures.achievedSecurityProfile}"></td>
-                <td th:text="${stageDTO.measures.importanceFactorMultiplyByAchievedSecurityProfile}"></td>
-                <td th:text="${stageDTO.measures.profileComparison}"></td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].measures.matrixElementNumber|" th:value="${stageDTO.getMeasures().getMatrixElementNumber()}"/>
+                    <span th:text="${stageDTO.measures.matrixElementNumber}"/>
+                </td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].measures.importanceFactor|" th:value="${stageDTO.getMeasures().getImportanceFactor()}"/>
+                    <span th:text="${stageDTO.measures.importanceFactor}"/>
+                </td>
+                <td>
+                    <input th:name="|stageDTOS[${itemStat.index}].measures.achievedSecurityProfile|" th:value="${stageDTO.getMeasures().getAchievedSecurityProfile()}"/>
+                </td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].measures.importanceFactorMultiplyByAchievedSecurityProfile|" th:value="${stageDTO.getMeasures().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
+                    <span th:text="${stageDTO.measures.importanceFactorMultiplyByAchievedSecurityProfile}"/>
+                </td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].measures.profileComparison|" th:value="${stageDTO.getMeasures().getProfileComparison()}"/>
+                    <span th:text="${stageDTO.measures.profileComparison}"/>
+                </td>
             </tr>
             <tr>
-                <td th:text="${stageDTO.resources.matrixElementNumber}"></td>
-                <td th:text="${stageDTO.resources.importanceFactor}"></td>
-                <td th:text="${stageDTO.resources.achievedSecurityProfile}"></td>
-                <td th:text="${stageDTO.resources.importanceFactorMultiplyByAchievedSecurityProfile}"></td>
-                <td th:text="${stageDTO.resources.profileComparison}"></td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].resources.matrixElementNumber|" th:value="${stageDTO.getResources().getMatrixElementNumber()}"/>
+                    <span th:text="${stageDTO.resources.matrixElementNumber}"/>
+                </td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].resources.importanceFactor|" th:value="${stageDTO.getResources().getImportanceFactor()}"/>
+                    <span th:text="${stageDTO.resources.importanceFactor}"/>
+                </td>
+                <td>
+                    <input th:name="|stageDTOS[${itemStat.index}].resources.achievedSecurityProfile|" th:value="${stageDTO.getResources().getAchievedSecurityProfile()}"/>
+                </td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].resources.importanceFactorMultiplyByAchievedSecurityProfile|" th:value="${stageDTO.getResources().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
+                    <span th:text="${stageDTO.resources.importanceFactorMultiplyByAchievedSecurityProfile}"/>
+                </td>
+                <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].resources.profileComparison|" th:value="${stageDTO.getResources().getProfileComparison()}"/>
+                    <span th:text="${stageDTO.resources.profileComparison}"/>
+                </td>
             </tr>
         </div>
         </tbody>
@@ -77,6 +136,7 @@
         </div>
     </h1>
     <div>
+        <input hidden th:name="requiredSecurityProfile" th:value="${requiredSecurityProfile}"/>
         <input type="submit" value="Рассчитать оценку" style="margin: .4rem"/>
     </div>
 </form>
