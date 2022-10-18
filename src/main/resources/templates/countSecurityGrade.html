@@ -135,6 +135,39 @@
             [[${quantityGrade}]]
         </div>
     </h1>
+
+    <table class="table table-striped-columns">
+        <thead>
+        <tr>
+            <td th:rowspan="2">Показатели</td>
+            <td th:colspan="7">Направления защиты</td>
+            <td th:rowspan="2">Qсзи</td>
+        </tr>
+        <tr>
+            <td th:each="stageDTOS, itemStat : ${stages.stageDTOS}">
+                <span th:text="${itemStat.index+1}"></span>
+            </td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Качественный</td>
+            <td th:each="stageDTO : ${stages.stageDTOS}" th:text="${stageDTO.requirementGroupsFulfillment}"></td>
+            <td>[[${qualityGrade}]]</td>
+        </tr>
+        <tr>
+            <td>Количественный</td>
+            <td th:each="stageDTO : ${stages.stageDTOS}" th:text="${
+                (stageDTO.base.profileComparison +
+                stageDTO.structure.profileComparison +
+                stageDTO.measures.profileComparison +
+                stageDTO.resources.profileComparison) / 4
+            }"></td>
+            <td>[[${quantityGrade}]]</td>
+        </tr>
+        </tbody>
+    </table>
+
     <div>
         <input hidden th:name="requiredSecurityProfile" th:value="${requiredSecurityProfile}"/>
         <input type="submit" value="Рассчитать оценку" style="margin: .4rem"/>
