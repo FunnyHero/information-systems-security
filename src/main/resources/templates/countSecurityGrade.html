@@ -11,132 +11,7 @@
     margin: 8px 0;
     max-width: 80%;
 ">
-    <header>
-        <h1 th:align="center" th:inline="text" >
-            Профиль безопасности требуемый
-            [[${requiredSecurityProfile}]]
-        </h1>
-    </header>
-    <table class="table table-striped-columns">
-        <thead>
-        <tr>
-            <th scope="col">№ элемента матрицы</th>
-            <th scope="col">Коэффициент важности</th>
-            <th scope="col">Профиль безопасности достигнутый</th>
-            <th scope="col">Qд*aj</th>
-            <th scope="col">Сравнение профилей</th>
-            <th scope="col">Степень выполнения групп требований</th>
-        </tr>
-        </thead>
-        <tbody>
-        <div th:remove="tag" th:each="stageDTO, itemStat : ${stages.stageDTOS}">
-            <tr>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].base.matrixElementNumber|" th:value="${stageDTO.getBase().getMatrixElementNumber()}"/>
-                    <span th:text="${stageDTO.base.matrixElementNumber}"/>
-                </td>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].base.importanceFactor|" th:value="${stageDTO.getBase().getImportanceFactor()}"/>
-                    <span th:text="${stageDTO.base.importanceFactor}"/>
-                </td>
-                <td>
-                    <input th:name="|stageDTOS[${itemStat.index}].base.achievedSecurityProfile|" th:value="${stageDTO.getBase().getAchievedSecurityProfile()}"/>
-                </td>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].base.importanceFactorMultiplyByAchievedSecurityProfile|" th:value="${stageDTO.getBase().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
-                    <span th:text="${stageDTO.base.importanceFactorMultiplyByAchievedSecurityProfile}"/>
-                </td>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].base.profileComparison|" th:value="${stageDTO.getBase().getProfileComparison()}"/>
-                    <span th:text="${stageDTO.base.profileComparison}"/>
-                </td>
-                <td th:rowspan="4">
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].requirementGroupsFulfillment|" th:value="${stageDTO.getRequirementGroupsFulfillment()}"/>
-                    <span th:text="${stageDTO.requirementGroupsFulfillment}"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].structure.matrixElementNumber|" th:value="${stageDTO.getStructure().getMatrixElementNumber()}"/>
-                    <span th:text="${stageDTO.structure.matrixElementNumber}"/>
-                </td>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].structure.importanceFactor|" th:value="${stageDTO.getStructure().getImportanceFactor()}"/>
-                    <span th:text="${stageDTO.structure.importanceFactor}"/>
-                </td>
-                <td>
-                    <input th:name="|stageDTOS[${itemStat.index}].structure.achievedSecurityProfile|" th:value="${stageDTO.getStructure().getAchievedSecurityProfile()}"/>
-                </td>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].structure.importanceFactorMultiplyByAchievedSecurityProfile|" th:value="${stageDTO.getStructure().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
-                    <span th:text="${stageDTO.structure.importanceFactorMultiplyByAchievedSecurityProfile}"/>
-                </td>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].structure.profileComparison|" th:value="${stageDTO.getStructure().getProfileComparison()}"/>
-                    <span th:text="${stageDTO.structure.profileComparison}"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].measures.matrixElementNumber|" th:value="${stageDTO.getMeasures().getMatrixElementNumber()}"/>
-                    <span th:text="${stageDTO.measures.matrixElementNumber}"/>
-                </td>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].measures.importanceFactor|" th:value="${stageDTO.getMeasures().getImportanceFactor()}"/>
-                    <span th:text="${stageDTO.measures.importanceFactor}"/>
-                </td>
-                <td>
-                    <input th:name="|stageDTOS[${itemStat.index}].measures.achievedSecurityProfile|" th:value="${stageDTO.getMeasures().getAchievedSecurityProfile()}"/>
-                </td>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].measures.importanceFactorMultiplyByAchievedSecurityProfile|" th:value="${stageDTO.getMeasures().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
-                    <span th:text="${stageDTO.measures.importanceFactorMultiplyByAchievedSecurityProfile}"/>
-                </td>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].measures.profileComparison|" th:value="${stageDTO.getMeasures().getProfileComparison()}"/>
-                    <span th:text="${stageDTO.measures.profileComparison}"/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].resources.matrixElementNumber|" th:value="${stageDTO.getResources().getMatrixElementNumber()}"/>
-                    <span th:text="${stageDTO.resources.matrixElementNumber}"/>
-                </td>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].resources.importanceFactor|" th:value="${stageDTO.getResources().getImportanceFactor()}"/>
-                    <span th:text="${stageDTO.resources.importanceFactor}"/>
-                </td>
-                <td>
-                    <input th:name="|stageDTOS[${itemStat.index}].resources.achievedSecurityProfile|" th:value="${stageDTO.getResources().getAchievedSecurityProfile()}"/>
-                </td>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].resources.importanceFactorMultiplyByAchievedSecurityProfile|" th:value="${stageDTO.getResources().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
-                    <span th:text="${stageDTO.resources.importanceFactorMultiplyByAchievedSecurityProfile}"/>
-                </td>
-                <td>
-                    <input hidden th:name="|stageDTOS[${itemStat.index}].resources.profileComparison|" th:value="${stageDTO.getResources().getProfileComparison()}"/>
-                    <span th:text="${stageDTO.resources.profileComparison}"/>
-                </td>
-            </tr>
-        </div>
-        </tbody>
-    </table>
-    <h1 th:align="center" th:inline="text" style="
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-">
-        <div th:align="left" th:inline="text" style="display:block">
-            Качественная оценка
-            [[${qualityGrade}]]
-        </div>
-        <div th:align="right" th:inline="text" style="display:block">
-            Количественная оценка
-            [[${quantityGrade}]]
-        </div>
-    </h1>
-
-    <table class="table table-striped-columns">
+    <table class="table table-bordered">
         <thead>
         <tr>
             <td th:rowspan="2">Показатели</td>
@@ -168,10 +43,68 @@
         </tbody>
     </table>
 
-    <div>
-        <input hidden th:name="requiredSecurityProfile" th:value="${requiredSecurityProfile}"/>
-        <input type="submit" value="Рассчитать оценку" style="margin: .4rem"/>
+
+    <script th:inline="javascript">
+        window.onload = function() {
+            const StageEnum = {
+                INFORMATION_TO_BE_PROTECTED: "Определение информации, подлежащей защите",
+                IDENTIFICATION_OF_POTENTIAL_THREATS: "Выявление полного множества потенциально " +
+                    "возможных угроз и каналов утечки информации",
+                ASSESSMENT_OF_VULNERABILITY_AND_RISKS: "Проведение оценки уязвимости и рисков информации " +
+                    "при имеющемся множестве угроз и каналов утечки",
+                DETERMINATION_OF_REQUIREMENTS_FOR_PROTECTION_SYSTEM: "Определение требований к системе защиты",
+                CHOICE_OF_INFORMATION_SECURITY_TOOLS: "Осуществление выбора средств защиты " +
+                    "информации и их характеристик",
+                IMPLEMENTATION_OF_REMEDIES: "Внедрение и организация использования выбранных мер, " +
+                    "способов и средств защиты",
+                IMPLEMENTATION_OF_INTEGRITY_CONTROL_AND_MANAGEMENT_OF_SECURITY_SYSTEM: "Осуществление контроля " +
+                    "целостности и управление системой защиты"
+            }
+            Object.freeze(StageEnum)
+            var stages = [[${stages.stageDTOS}]];
+
+            var dps = [];
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                theme: "light1",
+                animationEnabled: true,
+                title: {
+                    text: "Количественная оценка этапов"
+                },
+                axisX:{
+                    title: "Блок показателей \"Этапы\""
+                },
+                axisY:{
+                    title:"Уровень защиты",
+                    minimum: 0,
+                    maximum: 1
+                },
+                data: [{
+                    type: "column",
+                    dataPoints: dps
+                }]
+            });
+
+            function addDataPointsAndRender() {
+                for (let i = 0; i < stages.length; i++) {
+                    dps.push({
+                        label: Object.values(StageEnum)[i],
+                        y: (stages[i].base.profileComparison +
+                            stages[i].structure.profileComparison +
+                            stages[i].measures.profileComparison +
+                            stages[i].resources.profileComparison) / 4.0
+                    });
+                }
+                chart.render();
+            }
+            addDataPointsAndRender()
+        }
+    </script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <div id="chartContainer" style="height: 270px; width: 100%;">
     </div>
+
 </form>
 </body>
 </html>
