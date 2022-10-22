@@ -63,9 +63,30 @@
             Object.freeze(StageEnum)
             var stages = [[${stages.stageDTOS}]];
 
-            var dps = [];
+            var quantityGradeChartDataPoints = [];
+            var qualityGradeChartDataPoints = [];
 
-            var chart = new CanvasJS.Chart("chartContainer", {
+            var qualityGradeChart = new CanvasJS.Chart("qualityGradeChartContainer", {
+                theme: "light1",
+                animationEnabled: true,
+                title: {
+                    text: "Качественная оценка этапов"
+                },
+                axisX:{
+                    title: "Блок показателей \"Этапы\""
+                },
+                axisY:{
+                    title:"Уровень защиты",
+                    minimum: 0,
+                    maximum: 1
+                },
+                data: [{
+                    type: "column",
+                    dataPoints: qualityGradeChartDataPoints
+                }]
+            });
+
+            var quantityGradeChart = new CanvasJS.Chart("quantityGradeChartContainer", {
                 theme: "light1",
                 animationEnabled: true,
                 title: {
@@ -81,13 +102,23 @@
                 },
                 data: [{
                     type: "column",
-                    dataPoints: dps
+                    dataPoints: quantityGradeChartDataPoints
                 }]
             });
 
-            function addDataPointsAndRender() {
+            function addDataPointsForQualityGradeAndRender() {
                 for (let i = 0; i < stages.length; i++) {
-                    dps.push({
+                    qualityGradeChartDataPoints.push({
+                        label: Object.values(StageEnum)[i],
+                        y: stages[i].requirementGroupsFulfillment
+                    });
+                }
+                qualityGradeChart.render();
+            }
+
+            function addDataPointsForQuantityGradeAndRender() {
+                for (let i = 0; i < stages.length; i++) {
+                    quantityGradeChartDataPoints.push({
                         label: Object.values(StageEnum)[i],
                         y: (stages[i].base.profileComparison +
                             stages[i].structure.profileComparison +
@@ -95,15 +126,17 @@
                             stages[i].resources.profileComparison) / 4.0
                     });
                 }
-                chart.render();
+                quantityGradeChart.render();
             }
-            addDataPointsAndRender()
+
+            addDataPointsForQuantityGradeAndRender();
+            addDataPointsForQualityGradeAndRender();
         }
     </script>
     <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
-    <div id="chartContainer" style="height: 270px; width: 100%;">
-    </div>
+    <div id="qualityGradeChartContainer" style="height: 270px; width: 100%;"></div>
+    <div id="quantityGradeChartContainer" style="height: 270px; width: 100%;"></div>
 
 </form>
 </body>
