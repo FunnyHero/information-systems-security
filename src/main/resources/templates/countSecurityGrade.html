@@ -9,7 +9,7 @@
 <form th:method="POST" th:object="${stages}" action="securityGrade" th:align="center" style="
     padding: 12px 20px;
     margin: 8px 0;
-    max-width: 80%;
+    max-width: 100%;
 ">
     <table class="table table-bordered">
         <thead>
@@ -63,9 +63,7 @@
             Object.freeze(StageEnum)
             var stages = [[${stages.stageDTOS}]];
 
-            var quantityGradeChartDataPoints = [];
             var qualityGradeChartDataPoints = [];
-
             var qualityGradeChart = new CanvasJS.Chart("qualityGradeChartContainer", {
                 theme: "light1",
                 animationEnabled: true,
@@ -85,7 +83,17 @@
                     dataPoints: qualityGradeChartDataPoints
                 }]
             });
+            function addDataPointsForQualityGradeAndRender() {
+                for (let i = 0; i < stages.length; i++) {
+                    qualityGradeChartDataPoints.push({
+                        label: Object.values(StageEnum)[i],
+                        y: stages[i].requirementGroupsFulfillment
+                    });
+                }
+                qualityGradeChart.render();
+            }
 
+            var quantityGradeChartDataPoints = [];
             var quantityGradeChart = new CanvasJS.Chart("quantityGradeChartContainer", {
                 theme: "light1",
                 animationEnabled: true,
@@ -105,17 +113,6 @@
                     dataPoints: quantityGradeChartDataPoints
                 }]
             });
-
-            function addDataPointsForQualityGradeAndRender() {
-                for (let i = 0; i < stages.length; i++) {
-                    qualityGradeChartDataPoints.push({
-                        label: Object.values(StageEnum)[i],
-                        y: stages[i].requirementGroupsFulfillment
-                    });
-                }
-                qualityGradeChart.render();
-            }
-
             function addDataPointsForQuantityGradeAndRender() {
                 for (let i = 0; i < stages.length; i++) {
                     quantityGradeChartDataPoints.push({
@@ -129,14 +126,126 @@
                 quantityGradeChart.render();
             }
 
+            var achievedSecurityProfileGradeChartDataPoints = [];
+            var achievedSecurityProfileGradeChart = new CanvasJS.Chart("achievedSecurityProfileGradeChartContainer", {
+                theme: "light1",
+                animationEnabled: true,
+                title: {
+                    text: "Сравнение профилей защиты"
+                },
+                axisX:{
+                    title: "Перечень показателей"
+                },
+                axisY:{
+                    title:"Степень выполнения требований",
+                    minimum: 0,
+                    maximum: 1,
+                    stripLines: [{
+                        value: [[${requiredSecurityProfile}]],
+                        label: "Профиль безопасности требуемый",
+                        labelFontColor: "#808080",
+                        labelAlign: "near"
+                    }]
+                },
+                data: [{
+                    type:"line",
+                    name: "Профиль безопасности достигнутый",
+                    showInLegend: true,
+                    markerSize: 0,
+                    dataPoints: achievedSecurityProfileGradeChartDataPoints
+                    }]
+            });
+            function addDataPointsForAchievedSecurityProfileGradeAndRender() {
+                let index = 0;
+                for (let i = 0; i < stages.length; i++) {
+                    achievedSecurityProfileGradeChartDataPoints.push({
+                        x: ++index,
+                        y: stages[i].base.achievedSecurityProfile
+                    });
+                    achievedSecurityProfileGradeChartDataPoints.push({
+                        x: ++index,
+                        y: stages[i].structure.achievedSecurityProfile
+                    });
+                    achievedSecurityProfileGradeChartDataPoints.push({
+                        x: ++index,
+                        y: stages[i].measures.achievedSecurityProfile
+                    });
+                    achievedSecurityProfileGradeChartDataPoints.push({
+                        x: ++index,
+                        y: stages[i].resources.achievedSecurityProfile
+                    });
+                }
+                achievedSecurityProfileGradeChart.render();
+            }
+
+            var profileComparisonChartDataPoints = [];
+            var profileComparisonChart = new CanvasJS.Chart("profileComparisonChartContainer", {
+                theme: "light1",
+                animationEnabled: true,
+                title: {
+                    text: "Оценка достигнутого профиля защиты"
+                },
+                axisX:{
+                    title: "Перечень показателей"
+                },
+                axisY:{
+                    title:"Условная оценка",
+                    minimum: 0,
+                    maximum: 1
+                },
+                data: [{
+                    type:"line",
+                    markerSize: 0,
+                    dataPoints: profileComparisonChartDataPoints
+                }]
+            });
+            function addDataPointsForProfileComparisonAndRender() {
+                let index = 0;
+                for (let i = 0; i < stages.length; i++) {
+                    profileComparisonChartDataPoints.push({
+                        x: ++index,
+                        y: stages[i].base.profileComparison
+                    });
+                    profileComparisonChartDataPoints.push({
+                        x: ++index,
+                        y: stages[i].structure.profileComparison
+                    });
+                    profileComparisonChartDataPoints.push({
+                        x: ++index,
+                        y: stages[i].measures.profileComparison
+                    });
+                    profileComparisonChartDataPoints.push({
+                        x: ++index,
+                        y: stages[i].resources.profileComparison
+                    });
+                }
+                profileComparisonChart.render();
+            }
+
             addDataPointsForQuantityGradeAndRender();
             addDataPointsForQualityGradeAndRender();
+            addDataPointsForAchievedSecurityProfileGradeAndRender();
+            addDataPointsForProfileComparisonAndRender();
         }
     </script>
     <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
-    <div id="qualityGradeChartContainer" style="height: 270px; width: 100%;"></div>
-    <div id="quantityGradeChartContainer" style="height: 270px; width: 100%;"></div>
+    <div style="
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    ">
+        <div id="qualityGradeChartContainer" style="height: 270px; width: 100%;"></div>
+        <div id="quantityGradeChartContainer" style="height: 270px; width: 100%;"></div>
+    </div>
+    <div style="
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    ">
+        <div id="achievedSecurityProfileGradeChartContainer" style="height: 270px; width: 100%;"></div>
+        <div id="profileComparisonChartContainer" style="height: 270px; width: 100%;"></div>
+    </div>
 
 </form>
 </body>
