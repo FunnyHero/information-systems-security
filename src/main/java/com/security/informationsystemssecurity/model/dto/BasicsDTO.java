@@ -14,7 +14,6 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Accessors(chain = true)
 public class BasicsDTO {
-    private Integer matrixElementNumber;
     private BigDecimal importanceFactor;
     private BigDecimal achievedSecurityProfile;
     private BigDecimal importanceFactorMultiplyByAchievedSecurityProfile;
