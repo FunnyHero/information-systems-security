@@ -46,11 +46,11 @@ public class SecurityGradeServiceImpl implements SecurityGradeService {
         BigDecimal sum = BigDecimal.ZERO;
         int roundingScale = 5;
 
-        for(StageDTO stageDTO : stageDTOS) {
+        for (StageDTO stageDTO : stageDTOS) {
             sum = sum.add(stageDTO.getRequirementGroupsFulfillment());
         }
 
-        return sum.divide(BigDecimal.valueOf(stageDTOS.size()),roundingScale, RoundingMode.HALF_EVEN);
+        return sum.divide(BigDecimal.valueOf(stageDTOS.size()), roundingScale, RoundingMode.HALF_EVEN);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class SecurityGradeServiceImpl implements SecurityGradeService {
         Integer sum = 0;
         int roundingScale = 5;
 
-        for(StageDTO stageDTO : stageDTOS) {
+        for (StageDTO stageDTO : stageDTOS) {
             sum += stageDTO.getBase().getProfileComparison();
             sum += stageDTO.getStructure().getProfileComparison();
             sum += stageDTO.getMeasures().getProfileComparison();
@@ -67,11 +67,11 @@ public class SecurityGradeServiceImpl implements SecurityGradeService {
         }
 
         return BigDecimal.valueOf(sum)
-                .divide(BigDecimal.valueOf(stageDTOS.size()*4L),roundingScale, RoundingMode.HALF_EVEN);
+                .divide(BigDecimal.valueOf(stageDTOS.size() * 4L), roundingScale, RoundingMode.HALF_EVEN);
     }
 
     private void countAchievedSecProfileWithImportanceFactor(List<StageDTO> stageDTOS) {
-        for(StageDTO stageDTO : stageDTOS) {
+        for (StageDTO stageDTO : stageDTOS) {
             stageDTO.getBase()
                     .setImportanceFactorMultiplyByAchievedSecurityProfile(
                             stageDTO.getBase()
@@ -100,7 +100,7 @@ public class SecurityGradeServiceImpl implements SecurityGradeService {
     }
 
     private void compareProfiles(List<StageDTO> stageDTOS, BigDecimal requiredSecurityProfile) {
-        for(StageDTO stageDTO : stageDTOS) {
+        for (StageDTO stageDTO : stageDTOS) {
             stageDTO.getBase()
                     .setProfileComparison(
                             stageDTO.getBase()
@@ -128,8 +128,8 @@ public class SecurityGradeServiceImpl implements SecurityGradeService {
         }
     }
 
-    private void countRequirementGroupsFulfillment(List<StageDTO> stageDTOS){
-        for(StageDTO stageDTO : stageDTOS) {
+    private void countRequirementGroupsFulfillment(List<StageDTO> stageDTOS) {
+        for (StageDTO stageDTO : stageDTOS) {
             stageDTO.setRequirementGroupsFulfillment(
                     stageDTO.getBase().getImportanceFactorMultiplyByAchievedSecurityProfile().add(
                             stageDTO.getStructure().getImportanceFactorMultiplyByAchievedSecurityProfile()

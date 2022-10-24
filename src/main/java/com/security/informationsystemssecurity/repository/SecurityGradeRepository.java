@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface SecurityGradeRepository {
     void delete();
+
     void save(List<StageDTO> newStageDTOS);
+
     List<StageDTO> findAll();
 }

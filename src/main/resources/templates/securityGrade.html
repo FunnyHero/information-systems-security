@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Оценка защищенности</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
 <form th:method="POST" th:object="${stages}" action="securityGrade" th:align="center" style="
@@ -11,117 +12,121 @@
     margin: 8px 0;
     max-width: 100%;
 ">
-<header>
-    <h1 th:align="center" th:inline="text" >
-        Профиль безопасности требуемый
-        [[${requiredSecurityProfile}]]
-    </h1>
-</header>
-<table class="table table-bordered">
-    <thead>
-    <tr>
-        <th scope="col">Этап</th>
-        <th scope="col">Основы</th>
-        <th scope="col">Профиль безопасности достигнутый</th>
-    </tr>
-    </thead>
-    <tbody>
-    <div th:remove="tag" th:each="stageDTO, itemStat : ${stages.stageDTOS}">
+    <header>
+        <h1 th:align="center" th:inline="text">
+            Профиль безопасности требуемый
+            [[${requiredSecurityProfile}]]
+        </h1>
+    </header>
+    <table class="table table-bordered">
+        <thead>
         <tr>
-            <td th:rowspan="4">
+            <th scope="col">Этап</th>
+            <th scope="col">Основы</th>
+            <th scope="col">Профиль безопасности достигнутый</th>
+        </tr>
+        </thead>
+        <tbody>
+        <div th:remove="tag" th:each="stageDTO, itemStat : ${stages.stageDTOS}">
+            <tr>
+                <td th:rowspan="4">
                 <span th:text="${T(com.security.informationsystemssecurity.model.enums.StageEnum)
                 .values()[itemStat.index]
                 .getStageName()}"></span>
-            </td>
-            <td>
+                </td>
+                <td>
                 <span th:text="${T(com.security.informationsystemssecurity.model.enums.BasicsEnum)
                 .values()[0]
                 .getBasicsName()}"></span>
-            </td>
-            <td>
-                <input th:name="|stageDTOS[${itemStat.index}].base.achievedSecurityProfile|"
-                       th:value="${stageDTO.getBase().getAchievedSecurityProfile()}"/>
+                </td>
+                <td>
+                    <input th:name="|stageDTOS[${itemStat.index}].base.achievedSecurityProfile|"
+                           th:value="${stageDTO.getBase().getAchievedSecurityProfile()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].base.importanceFactor|"
-                       th:value="${stageDTO.getBase().getImportanceFactor()}"/>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].base.importanceFactor|"
+                           th:value="${stageDTO.getBase().getImportanceFactor()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].base.importanceFactorMultiplyByAchievedSecurityProfile|"
-                       th:value="${stageDTO.getBase().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
+                    <input hidden
+                           th:name="|stageDTOS[${itemStat.index}].base.importanceFactorMultiplyByAchievedSecurityProfile|"
+                           th:value="${stageDTO.getBase().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].base.profileComparison|"
-                       th:value="${stageDTO.getBase().getProfileComparison()}"/>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].base.profileComparison|"
+                           th:value="${stageDTO.getBase().getProfileComparison()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].requirementGroupsFulfillment|"
-                       th:value="${stageDTO.getRequirementGroupsFulfillment()}"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].requirementGroupsFulfillment|"
+                           th:value="${stageDTO.getRequirementGroupsFulfillment()}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
                 <span th:text="${T(com.security.informationsystemssecurity.model.enums.BasicsEnum)
                 .values()[1]
                 .getBasicsName()}"></span>
-            </td>
-            <td>
-                <input th:name="|stageDTOS[${itemStat.index}].structure.achievedSecurityProfile|"
-                       th:value="${stageDTO.getStructure().getAchievedSecurityProfile()}"/>
+                </td>
+                <td>
+                    <input th:name="|stageDTOS[${itemStat.index}].structure.achievedSecurityProfile|"
+                           th:value="${stageDTO.getStructure().getAchievedSecurityProfile()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].structure.importanceFactor|"
-                       th:value="${stageDTO.getStructure().getImportanceFactor()}"/>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].structure.importanceFactor|"
+                           th:value="${stageDTO.getStructure().getImportanceFactor()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].structure.importanceFactorMultiplyByAchievedSecurityProfile|"
-                       th:value="${stageDTO.getStructure().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
+                    <input hidden
+                           th:name="|stageDTOS[${itemStat.index}].structure.importanceFactorMultiplyByAchievedSecurityProfile|"
+                           th:value="${stageDTO.getStructure().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].structure.profileComparison|"
-                       th:value="${stageDTO.getStructure().getProfileComparison()}"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].structure.profileComparison|"
+                           th:value="${stageDTO.getStructure().getProfileComparison()}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
                 <span th:text="${T(com.security.informationsystemssecurity.model.enums.BasicsEnum)
                 .values()[2]
                 .getBasicsName()}"></span>
-            </td>
-            <td>
-                <input th:name="|stageDTOS[${itemStat.index}].measures.achievedSecurityProfile|"
-                       th:value="${stageDTO.getMeasures().getAchievedSecurityProfile()}"/>
+                </td>
+                <td>
+                    <input th:name="|stageDTOS[${itemStat.index}].measures.achievedSecurityProfile|"
+                           th:value="${stageDTO.getMeasures().getAchievedSecurityProfile()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].measures.importanceFactor|"
-                       th:value="${stageDTO.getMeasures().getImportanceFactor()}"/>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].measures.importanceFactor|"
+                           th:value="${stageDTO.getMeasures().getImportanceFactor()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].measures.importanceFactorMultiplyByAchievedSecurityProfile|"
-                       th:value="${stageDTO.getMeasures().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
+                    <input hidden
+                           th:name="|stageDTOS[${itemStat.index}].measures.importanceFactorMultiplyByAchievedSecurityProfile|"
+                           th:value="${stageDTO.getMeasures().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].measures.profileComparison|"
-                       th:value="${stageDTO.getMeasures().getProfileComparison()}"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].measures.profileComparison|"
+                           th:value="${stageDTO.getMeasures().getProfileComparison()}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
                 <span th:text="${T(com.security.informationsystemssecurity.model.enums.BasicsEnum)
                 .values()[3]
                 .getBasicsName()}"></span>
-            </td>
-            <td>
-                <input th:name="|stageDTOS[${itemStat.index}].resources.achievedSecurityProfile|"
-                       th:value="${stageDTO.getResources().getAchievedSecurityProfile()}"/>
+                </td>
+                <td>
+                    <input th:name="|stageDTOS[${itemStat.index}].resources.achievedSecurityProfile|"
+                           th:value="${stageDTO.getResources().getAchievedSecurityProfile()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].resources.importanceFactor|"
-                       th:value="${stageDTO.getResources().getImportanceFactor()}"/>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].resources.importanceFactor|"
+                           th:value="${stageDTO.getResources().getImportanceFactor()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].resources.importanceFactorMultiplyByAchievedSecurityProfile|"
-                       th:value="${stageDTO.getResources().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
+                    <input hidden
+                           th:name="|stageDTOS[${itemStat.index}].resources.importanceFactorMultiplyByAchievedSecurityProfile|"
+                           th:value="${stageDTO.getResources().getImportanceFactorMultiplyByAchievedSecurityProfile()}"/>
 
-                <input hidden th:name="|stageDTOS[${itemStat.index}].resources.profileComparison|"
-                       th:value="${stageDTO.getResources().getProfileComparison()}"/>
-            </td>
-        </tr>
+                    <input hidden th:name="|stageDTOS[${itemStat.index}].resources.profileComparison|"
+                           th:value="${stageDTO.getResources().getProfileComparison()}"/>
+                </td>
+            </tr>
+        </div>
+        </tbody>
+    </table>
+    <div>
+        <input hidden th:name="requiredSecurityProfile" th:value="${requiredSecurityProfile}"/>
+        <input type="submit" value="Рассчитать оценку" style="margin: .4rem"/>
     </div>
-    </tbody>
-</table>
-<div>
-    <input hidden th:name="requiredSecurityProfile" th:value="${requiredSecurityProfile}"/>
-    <input type="submit" value="Рассчитать оценку" style="margin: .4rem"/>
-</div>
 </form>
 </body>
 </html>

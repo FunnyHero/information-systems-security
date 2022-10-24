@@ -22,52 +22,52 @@ public class DirectionsRepositoryImpl implements DirectionsRepository {
             new DirectionDTO(
                     Arrays.asList(
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.5"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.2"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.5"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.2"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.5"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.2"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.5"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.2"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.5"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.2"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.5"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.2"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.5"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.2"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.5"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.2"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             )
                     ),
@@ -76,52 +76,52 @@ public class DirectionsRepositoryImpl implements DirectionsRepository {
             new DirectionDTO(
                     Arrays.asList(
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.5"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.2"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.5"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.2"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             )
                     ),
@@ -130,52 +130,52 @@ public class DirectionsRepositoryImpl implements DirectionsRepository {
             new DirectionDTO(
                     Arrays.asList(
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.5"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.2"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.5"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.2"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             )
                     ),
@@ -184,52 +184,52 @@ public class DirectionsRepositoryImpl implements DirectionsRepository {
             new DirectionDTO(
                     Arrays.asList(
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.5"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.2"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.5"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.2"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             )
                     ),
@@ -238,52 +238,52 @@ public class DirectionsRepositoryImpl implements DirectionsRepository {
             new DirectionDTO(
                     Arrays.asList(
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.5"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.2"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.5"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.2"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.5"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.2"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.5"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.2"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.5"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.2"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.5"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.2"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.25"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             ),
                             new StageDTO(
-                                    new BasicsDTO(new BigDecimal("0.5"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.2"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
-                                    new BasicsDTO(new BigDecimal("0.15"),BigDecimal.ZERO,BigDecimal.ZERO,0),
+                                    new BasicsDTO(new BigDecimal("0.5"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.2"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
+                                    new BasicsDTO(new BigDecimal("0.15"), BigDecimal.ZERO, BigDecimal.ZERO, 0),
                                     BigDecimal.ZERO
                             )
                     ),
