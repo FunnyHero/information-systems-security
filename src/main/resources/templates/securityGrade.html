@@ -22,6 +22,7 @@
         <thead>
         <tr>
             <th scope="col">Этап</th>
+            <th scope="col">Перечень показателей</th>
             <th scope="col">Основы</th>
             <th scope="col">Профиль безопасности достигнутый</th>
         </tr>
@@ -34,6 +35,7 @@
                 .values()[itemStat.index]
                 .getStageName()}"></span>
                 </td>
+                <td th:text="${(itemStat.index+1)*4-3}"></td>
                 <td>
                 <span th:text="${T(com.security.informationsystemssecurity.model.enums.BasicsEnum)
                 .values()[0]
@@ -58,6 +60,7 @@
                 </td>
             </tr>
             <tr>
+                <td th:text="${(itemStat.index+1)*4-2}"></td>
                 <td>
                 <span th:text="${T(com.security.informationsystemssecurity.model.enums.BasicsEnum)
                 .values()[1]
@@ -79,6 +82,7 @@
                 </td>
             </tr>
             <tr>
+                <td th:text="${(itemStat.index+1)*4-1}"></td>
                 <td>
                 <span th:text="${T(com.security.informationsystemssecurity.model.enums.BasicsEnum)
                 .values()[2]
@@ -100,6 +104,7 @@
                 </td>
             </tr>
             <tr>
+                <td th:text="${(itemStat.index+1)*4}"></td>
                 <td>
                 <span th:text="${T(com.security.informationsystemssecurity.model.enums.BasicsEnum)
                 .values()[3]
