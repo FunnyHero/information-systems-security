@@ -3,39 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Выбор направления</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
 <form th:method="POST" th:align="center" style="
     padding: 12px 20px;
     margin: 8px 0;
-    max-width: 80%;
+    max-width: 100%;
 ">
-    <img th:align="center" th:src = "@{/images/matrix.png}" style="
-        max-width: 100%;
-        height: auto;"
-    />
     <fieldset>
         <legend>Выберите направление:</legend>
         <div>
-        <input type="radio" id="directionChoice1" name="direction" value="INFORMATION_SYSTEM_OBJECTS_SECURITY">
-        <label for="directionChoice1">Защита объектов ИС</label>
-        <br/>
-        <input type="radio" id="directionChoice2" name="direction" value="PROCESSES_AND_PROGRAMS_SECURITY">
-        <label for="directionChoice2">Защита процессов и программ</label>
-        <br/>
-        <input type="radio" id="directionChoice3" name="direction" value="COMMUNICATIONS_CHANNELS_SECURITY">
-        <label for="directionChoice3">Защита каналов связи</label>
-        <br/>
-        <input type="radio" id="directionChoice4" name="direction" value="EMP_SUPPRESSION">
-        <label for="directionChoice4">ПЭМИН</label>
-        <br/>
-        <input type="radio" id="directionChoice5" name="direction" value="SECURITY_SYSTEM_CONTROL">
-        <label for="directionChoice5">Управление системой защиты</label>
-        <br/>
+            <input type="radio" id="directionChoice1" name="direction" value="INFORMATION_SYSTEM_OBJECTS_SECURITY">
+            <label for="directionChoice1">Защита объектов корпоративных систем</label>
+            <br/>
+            <input type="radio" id="directionChoice2" name="direction" value="PROCESSES_AND_PROGRAMS_SECURITY">
+            <label for="directionChoice2">Защита процессов, процедур и программ обработки информации</label>
+            <br/>
+            <input type="radio" id="directionChoice3" name="direction" value="COMMUNICATIONS_CHANNELS_SECURITY">
+            <label for="directionChoice3">Защита каналов связи</label>
+            <br/>
+            <input type="radio" id="directionChoice4" name="direction" value="EMP_SUPPRESSION">
+            <label for="directionChoice4">Подавление побочных электромагнитных излучений</label>
+            <br/>
+            <input type="radio" id="directionChoice5" name="direction" value="SECURITY_SYSTEM_CONTROL">
+            <label for="directionChoice5">Управление системой защиты</label>
+            <br/>
         </div>
 
-        <label for="requiredSecurityProfile" style="margin: .4rem">Задайте требуемый уровень защиты (в процентах): </label>
+        <label for="requiredSecurityProfile" style="margin: .4rem">Задайте требуемый уровень защиты (в
+            процентах): </label>
         <input type="text" name="requiredSecurityProfile" id="requiredSecurityProfile"/>
         <br/>
 

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Оценка защищенности</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
 <form th:method="POST" th:object="${stages}" action="securityGrade" th:align="center" style="
@@ -45,7 +46,7 @@
 
 
     <script th:inline="javascript">
-        window.onload = function() {
+        window.onload = function () {
             const StageEnum = {
                 INFORMATION_TO_BE_PROTECTED: "Определение информации, подлежащей защите",
                 IDENTIFICATION_OF_POTENTIAL_THREATS: "Выявление полного множества потенциально " +
@@ -70,11 +71,11 @@
                 title: {
                     text: "Качественная оценка этапов"
                 },
-                axisX:{
+                axisX: {
                     title: "Блок показателей \"Этапы\""
                 },
-                axisY:{
-                    title:"Уровень защиты",
+                axisY: {
+                    title: "Уровень защиты",
                     minimum: 0,
                     maximum: 1
                 },
@@ -83,6 +84,7 @@
                     dataPoints: qualityGradeChartDataPoints
                 }]
             });
+
             function addDataPointsForQualityGradeAndRender() {
                 for (let i = 0; i < stages.length; i++) {
                     qualityGradeChartDataPoints.push({
@@ -100,11 +102,11 @@
                 title: {
                     text: "Количественная оценка этапов"
                 },
-                axisX:{
+                axisX: {
                     title: "Блок показателей \"Этапы\""
                 },
-                axisY:{
-                    title:"Уровень защиты",
+                axisY: {
+                    title: "Уровень защиты",
                     minimum: 0,
                     maximum: 1
                 },
@@ -113,6 +115,7 @@
                     dataPoints: quantityGradeChartDataPoints
                 }]
             });
+
             function addDataPointsForQuantityGradeAndRender() {
                 for (let i = 0; i < stages.length; i++) {
                     quantityGradeChartDataPoints.push({
@@ -133,28 +136,29 @@
                 title: {
                     text: "Сравнение профилей защиты"
                 },
-                axisX:{
+                axisX: {
                     title: "Перечень показателей"
                 },
-                axisY:{
-                    title:"Степень выполнения требований",
+                axisY: {
+                    title: "Степень выполнения требований",
                     minimum: 0,
                     maximum: 1,
                     stripLines: [{
                         value: [[${requiredSecurityProfile}]],
-                        label: "Профиль безопасности требуемый",
+                        label: "Профиль безопасности требуемый " + [[${requiredSecurityProfile}]],
                         labelFontColor: "#808080",
                         labelAlign: "near"
                     }]
                 },
                 data: [{
-                    type:"line",
+                    type: "line",
                     name: "Профиль безопасности достигнутый",
                     showInLegend: true,
                     markerSize: 0,
                     dataPoints: achievedSecurityProfileGradeChartDataPoints
-                    }]
+                }]
             });
+
             function addDataPointsForAchievedSecurityProfileGradeAndRender() {
                 let index = 0;
                 for (let i = 0; i < stages.length; i++) {
@@ -185,20 +189,21 @@
                 title: {
                     text: "Оценка достигнутого профиля защиты"
                 },
-                axisX:{
+                axisX: {
                     title: "Перечень показателей"
                 },
-                axisY:{
-                    title:"Условная оценка",
+                axisY: {
+                    title: "Условная оценка",
                     minimum: 0,
                     maximum: 1
                 },
                 data: [{
-                    type:"line",
+                    type: "line",
                     markerSize: 0,
                     dataPoints: profileComparisonChartDataPoints
                 }]
             });
+
             function addDataPointsForProfileComparisonAndRender() {
                 let index = 0;
                 for (let i = 0; i < stages.length; i++) {
