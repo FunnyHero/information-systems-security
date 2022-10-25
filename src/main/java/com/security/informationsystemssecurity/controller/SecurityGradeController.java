@@ -27,7 +27,7 @@ public class SecurityGradeController {
     }
 
     @PostMapping
-    public String getSecurityGrade(Model model, HttpServletRequest request) {
+    public String postSecurityGrade(Model model, HttpServletRequest request) {
         DirectionEnum direction = valueOf(request.getParameterValues("direction")[0]);
 
         BigDecimal requiredSecurityProfile = new BigDecimal(request.getParameterValues(REQUIRED_SECURITY_PROFILE)[0]);
