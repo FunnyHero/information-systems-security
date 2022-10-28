@@ -12,9 +12,12 @@
     margin: 8px 0;
     max-width: 100%;
 ">
-    <fieldset>
+    <fieldset style="
+    margin: auto;
+    width: 40%;
+    position: relative;">
         <legend>Выберите направление:</legend>
-        <div>
+        <div th:align="left">
             <input type="radio" id="directionChoice1" name="direction" value="INFORMATION_SYSTEM_OBJECTS_SECURITY">
             <label for="directionChoice1">Защита объектов корпоративных систем</label>
             <br/>
@@ -30,13 +33,11 @@
             <input type="radio" id="directionChoice5" name="direction" value="SECURITY_SYSTEM_CONTROL">
             <label for="directionChoice5">Управление системой защиты</label>
             <br/>
+            <label for="requiredSecurityProfile" style="margin: .4rem">Задайте требуемый уровень защиты (в
+                процентах): </label>
+            <input type="text" name="requiredSecurityProfile" id="requiredSecurityProfile"/>
+            <br/>
         </div>
-
-        <label for="requiredSecurityProfile" style="margin: .4rem">Задайте требуемый уровень защиты (в
-            процентах): </label>
-        <input type="text" name="requiredSecurityProfile" id="requiredSecurityProfile"/>
-        <br/>
-
         <input type="submit" value="Ок" style="margin: .4rem"/>
     </fieldset>
 </form>
